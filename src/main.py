@@ -5,8 +5,7 @@ from discord import Intents
 from dotenv import load_dotenv
 import os
 
-from controllers.StatusController import StatusController
-from controllers.SyncController import SyncController
+import controllers
 
 async def main():
 	load_dotenv()
@@ -16,9 +15,8 @@ async def main():
 		intents=Intents.all(),
 	)
 
-	await bot.add_cog(SyncController(bot)) 
-	await bot.add_cog(StatusController(bot)) 
-
+	await controllers.add_cogs(bot)
+	
 	print("App Commands:")
 	for command in bot.tree.walk_commands():
 		print(f'\t{command.name}')
