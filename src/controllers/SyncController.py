@@ -9,12 +9,12 @@ class SyncController(commands.Cog):
 	@commands.command()
 	@commands.is_owner()
 	async def sync(self, ctx: Context) -> None:
-		print("syncing")
+		print('syncing')
 		try:
 			synced = await ctx.bot.tree.sync()
-			print(f"Synced {len(synced)} commands ")
-			await ctx.send(f"Synced {len(synced)} commands ")
+			print(f'Synced {len(synced)} commands ')
+			await ctx.send(f'Synced {len(synced)} commands ')
 		except Exception as e:
-			print("error syncing")
+			print('error syncing')
 			print(e)
-			ctx.send("error syncing")
+			ctx.send('error syncing')

@@ -19,16 +19,16 @@ async def add_cogs(bot: Bot):
 	for(_, module_name, _) in iter_modules([package_dir]):
 
 		# filter out modules that does not ends with `Controller``
-		if(not module_name.endswith("Controller")):
+		if(not module_name.endswith('Controller')):
 			continue
 
 		# Import the module
-		module = import_module(f"{__name__}.{module_name}")
+		module = import_module(f'{__name__}.{module_name}')
 
 		# Find the class that ends with `Controller`
 		for key, value in module.__dict__.items():
-			if(key.endswith("Controller") and inspect.isclass(value)):
+			if(key.endswith('Controller') and inspect.isclass(value)):
 
 				# Add controller to the bot
-				print(f"Loading controller {value.__name__}")
+				print(f'Loading controller {value.__name__}')
 				await bot.add_cog(value(bot))

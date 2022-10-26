@@ -12,15 +12,15 @@ class StatusController(commands.Cog):
 		self.bot = bot
 
 	@commands.command(
-		name="ping",
+		name='ping',
 	)
 	async def pingCommand(self, ctx):
-		print("Ping received")
-		await ctx.send("Pong")
+		print('Ping received')
+		await ctx.send('Pong')
 
 	@app_commands.command(
-		name="status",
-		description="Display bot status",
+		name='status',
+		description='Display bot status',
 	)
 	async def statusCommand(self, interaction: Interaction) -> None:
 
