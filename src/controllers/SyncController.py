@@ -17,4 +17,4 @@ class SyncController(commands.Cog):
 		except Exception as e:
 			print('error syncing')
 			print(e)
-			ctx.send('error syncing')
+			await ctx.send('error syncing')

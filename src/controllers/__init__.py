@@ -16,7 +16,7 @@ async def add_cogs(bot: Bot):
 	# Get this init file's package directory
 	package_dir = Path(__file__).resolve().parent
 
-	for(_, module_name, _) in iter_modules([package_dir]):
+	for(_, module_name, _) in iter_modules([str(package_dir)]):
 
 		# filter out modules that does not ends with `Controller``
 		if(not module_name.endswith('Controller')):

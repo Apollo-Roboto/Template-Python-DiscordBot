@@ -23,3 +23,10 @@ python ./src/main.py
 ```
 
 One manual action needs to be done to update the slash commands. As the owner, send a private message with `!sync` to the bot.
+
+## With Docker
+
+```bash
+docker-compose build
+docker-compose --env-file ./.env up
+```

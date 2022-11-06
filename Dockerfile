@@ -7,7 +7,5 @@ WORKDIR /app
 # install dependencies
 RUN pip install -r requirements.txt
 
-EXPOSE 8080
-
 # startup command
 CMD ["python", "./src/main.py"]
