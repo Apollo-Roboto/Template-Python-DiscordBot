@@ -5,7 +5,7 @@ import inspect
 
 from discord.ext.commands import Bot
 
-async def add_cogs(bot: Bot):	
+async def add_cogs(bot: Bot):
 	"""
 	Function to dynamically load all controller class to the bot.
 
@@ -19,7 +19,7 @@ async def add_cogs(bot: Bot):
 	for(_, module_name, _) in iter_modules([str(package_dir)]):
 
 		# filter out modules that does not ends with `Controller``
-		if(not module_name.endswith('Controller')):
+		if not module_name.endswith('_controller'):
 			continue
 
 		# Import the module

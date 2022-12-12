@@ -1,5 +1,5 @@
 from discord import Embed, Color
-from models.Status import Status
+from models.status import Status
 
 color = Color.from_str('#5865f2')
 

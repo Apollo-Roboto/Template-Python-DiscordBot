@@ -1,5 +1,5 @@
 from discord.ext import commands
-from discord.ext.commands import Context, Greedy
+from discord.ext.commands import Context
 
 class SyncController(commands.Cog):
 

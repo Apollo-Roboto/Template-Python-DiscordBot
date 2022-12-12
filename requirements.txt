@@ -4,3 +4,4 @@ python-dotenv
 requests
 psutil
 discord.py==2.0.1
+discord-ext-prometheus
